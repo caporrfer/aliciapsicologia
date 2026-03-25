@@ -1,0 +1,9 @@
+services:
+  webalicia:
+    image: nginx:alpine
+    container_name: webalicia
+    restart: unless-stopped
+    ports:
+      - "8096:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
